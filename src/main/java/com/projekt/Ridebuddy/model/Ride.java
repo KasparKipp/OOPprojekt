@@ -1,4 +1,4 @@
-package com.projekt.rides.model;
+package com.projekt.Ridebuddy.model;
 
 import java.time.LocalDateTime;
 

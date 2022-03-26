@@ -1,7 +1,7 @@
-package com.projekt.rides.service;
+package com.projekt.Ridebuddy.service;
 
-import com.projekt.rides.dao.RideDao;
-import com.projekt.rides.model.Ride;
+import com.projekt.Ridebuddy.dao.RideDao;
+import com.projekt.Ridebuddy.model.Ride;
 
 import java.time.LocalDateTime;
 

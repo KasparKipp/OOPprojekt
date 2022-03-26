@@ -1,6 +1,6 @@
-package com.projekt.rides.service;
+package com.projekt.Ridebuddy.service;
 
-import com.projekt.rides.dao.RideDao;
+import com.projekt.Ridebuddy.dao.RideDao;
 
 public abstract class RidePeriod {
     final RideDao rideDao;

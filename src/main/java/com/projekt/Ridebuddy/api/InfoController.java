@@ -1,4 +1,4 @@
-package com.projekt.rides.api;
+package com.projekt.Ridebuddy.api;
 
 public class InfoController {
 }

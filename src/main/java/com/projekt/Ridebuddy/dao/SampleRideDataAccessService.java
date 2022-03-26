@@ -1,6 +1,6 @@
-package com.projekt.rides.dao;
+package com.projekt.Ridebuddy.dao;
 
-import com.projekt.rides.model.Ride;
+import com.projekt.Ridebuddy.model.Ride;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

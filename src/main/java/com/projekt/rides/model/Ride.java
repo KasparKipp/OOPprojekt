@@ -1,9 +1,9 @@
 package com.projekt.rides.model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Ride implements Comparable<Ride>{
-    private final Date date;
+    private final LocalDateTime date;
     private final String address;
     private final double price;
     private final double cancellationFee;
@@ -12,7 +12,7 @@ public class Ride implements Comparable<Ride>{
     private final boolean paymentMethod; //True if cash, else false
     private final int rideDistance;//in km
 
-    public Ride(Date date,
+    public Ride(LocalDateTime date,
                 String address,
                 double price,
                 double cancellationFee,
@@ -29,7 +29,7 @@ public class Ride implements Comparable<Ride>{
         this.rideDistance = rideDistance;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 

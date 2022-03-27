@@ -1,40 +1,43 @@
 package com.projekt.Ridebuddy.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDateTime;
 
 public class Ride implements Comparable<Ride>{
-    private final LocalDateTime date;
-    private final String address;
+    private final LocalDateTime rideDate;
+    private final String rideAddress;
     private final double price;
     private final double cancellationFee;
     private final double tip;
-    private final char valuuta; //What currency is used
-    private final boolean paymentMethod; //True if cash, else false
+    private final char currency; //What currency is used
+    private final int paymentMethod; //Values specified in model.Constants
     private final int rideDistance;//in km
 
-    public Ride(LocalDateTime date,
-                String address,
-                double price,
-                double cancellationFee,
-                double tip, char valuuta,
-                boolean paymentMethod,
-                int rideDistance) {
-        this.date = date;
-        this.address = address;
+    public Ride(@JsonProperty("rideDate") LocalDateTime rideDate,
+                @JsonProperty("rideAddress") String rideAddress,
+                @JsonProperty("price") double price,
+                @JsonProperty("cancellationFee") double cancellationFee,
+                @JsonProperty("tip") double tip,
+                @JsonProperty("currency") char currency,
+                @JsonProperty("paymentMethod") int paymentMethod,
+                @JsonProperty("rideDistance") int rideDistance) {
+        this.rideDate = rideDate;
+        this.rideAddress = rideAddress;
         this.price = price;
         this.cancellationFee = cancellationFee;
         this.tip = tip;
-        this.valuuta = valuuta;
+        this.currency = currency;
         this.paymentMethod = paymentMethod;
         this.rideDistance = rideDistance;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public LocalDateTime getRideDate() {
+        return rideDate;
     }
 
     public String getAddress() {
-        return address;
+        return rideAddress;
     }
 
     public double getRideIncome() {
@@ -47,7 +50,7 @@ public class Ride implements Comparable<Ride>{
 
     @Override
     public int compareTo(Ride o) {
-        return this.getDate().compareTo(o.getDate());
+        return this.getRideDate().compareTo(o.getRideDate());
     }
 
     @Override

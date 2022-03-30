@@ -1,11 +1,11 @@
-package com.projekt.Ridebuddy.service;
+package com.projekt.Ridebuddy.service.Scraparchive;
 
 import com.projekt.Ridebuddy.dao.RideDao;
-import com.projekt.Ridebuddy.model.Ride;
+import com.projekt.Ridebuddy.service.Scraparchive.RidePeriod;
 
 import java.time.LocalDateTime;
 
-public class CurrentMonth extends RidePeriod{
+public class CurrentMonth extends RidePeriod {
     private int periodRideDistance = 0;
     private double periodTotalIncome = 0;
 
@@ -24,10 +24,10 @@ public class CurrentMonth extends RidePeriod{
                 0,
                 0,
                 0);
-        for (Ride ride:rideDao.getRideData(date)) {
+        /*for (Ride ride:rideDao.getRideData(date)) {
             periodRideDistance += ride.getRideDistance();
             periodTotalIncome += ride.getRideIncome();
 
-        }
+        }*/
     }
 }

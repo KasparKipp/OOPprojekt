@@ -1,10 +1,11 @@
 package com.projekt.Ridebuddy.dao;
 
 import com.projekt.Ridebuddy.model.Ride;
-import org.apache.tomcat.util.digester.ArrayStack;
+import com.projekt.Ridebuddy.model.RideDateFormater;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -18,10 +19,16 @@ public class SampleRideDataAccessService implements RideDao{
 
     @Override
     public int insertRide(String platvorm, Ride ride) {
-        // Miks siin intelliJ pakub mulle .toUpperCase(Locale.Root)???
-        // Kaspar palun guugelda ja õpi mis see tähendab kui sa ei tea
         if (Objects.equals(platvorm.toUpperCase(), "UBER")) {
-            DB_UBER.add(ride);
+            DB_UBER.add(new Ride(
+                    ride.getRideDate(),
+                    ride.getRideAddress(),
+                    ride.getPrice(),
+                    ride.getCancellationFee(),
+                    ride.getTip(),
+                    ride.getCurrency(),
+                    ride.getCurrency(),
+                    ride.getPaymentMethod()));
         } else if (Objects.equals(platvorm.toUpperCase(), "BOLT")) {
             DB_BOLT.add(ride);
         } else return -1;

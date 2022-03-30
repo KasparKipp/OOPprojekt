@@ -1,8 +1,10 @@
 package com.projekt.Ridebuddy.dao;
 
 import com.projekt.Ridebuddy.model.Ride;
+import com.projekt.Ridebuddy.model.RideDateFormater;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public interface RideDao {
@@ -17,13 +19,7 @@ public interface RideDao {
 
     // for data on all rides get all rides from the turn of the millennia
     default List<Ride> getRideData(){
-        return getRideData(LocalDateTime.of(
-                2000,
-                1,
-                1,
-                0,
-                0,
-                0));
+        return getRideData(LocalDateTime.parse("2000-01-01T00:00", DateTimeFormatter.ISO_LOCAL_DATE_TIME));
     }
     // for all rides on a specific platform get all rides from that platform from 01.01.200
     default List<Ride> getRideData(String platvorm){

@@ -1,9 +1,9 @@
-package com.projekt.Ridebuddy.service;
+package com.projekt.Ridebuddy.service.Scraparchive;
 
 import com.projekt.Ridebuddy.dao.RideDao;
 
 public abstract class RidePeriod {
-    final RideDao rideDao;
+    private final RideDao rideDao;
 
     public RidePeriod(RideDao rideDao) {
         this.rideDao = rideDao;

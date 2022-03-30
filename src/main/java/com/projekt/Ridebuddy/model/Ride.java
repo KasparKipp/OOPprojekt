@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
 
-public class Ride implements Comparable<Ride>{
+public class Ride implements Comparable<Ride> {
     private final LocalDateTime rideDate;
     private final String rideAddress;
     private final double price;
@@ -32,16 +32,33 @@ public class Ride implements Comparable<Ride>{
         this.rideDistance = rideDistance;
     }
 
+
     public LocalDateTime getRideDate() {
         return rideDate;
     }
 
-    public String getAddress() {
+    public String getRideAddress() {
         return rideAddress;
     }
 
-    public double getRideIncome() {
-        return price + cancellationFee + tip;
+    public double getPrice() {
+        return price;
+    }
+
+    public double getCancellationFee() {
+        return cancellationFee;
+    }
+
+    public double getTip() {
+        return tip;
+    }
+
+    public char getCurrency() {
+        return currency;
+    }
+
+    public int getPaymentMethod() {
+        return paymentMethod;
     }
 
     public int getRideDistance() {

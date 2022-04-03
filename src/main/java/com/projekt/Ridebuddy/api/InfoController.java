@@ -35,5 +35,5 @@ public class InfoController {
         return rideDataService.getRides(LocalDateTime.parse(since, DateTimeFormatter.ISO_LOCAL_DATE_TIME));
     }
 
-    //TODO add postMapping to date .csv file
+    // TODO add postMapping to date .csv file
 }

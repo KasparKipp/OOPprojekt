@@ -1,7 +1,6 @@
-package com.projekt.Ridebuddy.service.Scraparchive;
+package com.projekt.Ridebuddy.rides.service.Scraparchive;
 
-import com.projekt.Ridebuddy.dao.RideDao;
-import com.projekt.Ridebuddy.service.Scraparchive.RidePeriod;
+import com.projekt.Ridebuddy.rides.dao.RideDao;
 
 import java.time.LocalDateTime;
 

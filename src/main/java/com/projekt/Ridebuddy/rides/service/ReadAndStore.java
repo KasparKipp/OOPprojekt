@@ -1,6 +1,6 @@
-package com.projekt.Ridebuddy.service;
+package com.projekt.Ridebuddy.rides.service;
 
-import com.projekt.Ridebuddy.dao.RideDao;
+import com.projekt.Ridebuddy.rides.dao.RideDao;
 
 public class ReadAndStore {
     private final RideDao rideDao;

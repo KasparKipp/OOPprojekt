@@ -1,8 +1,7 @@
 package com.projekt.Ridebuddy.api;
 
-import com.projekt.Ridebuddy.model.Ride;
-import com.projekt.Ridebuddy.model.RideDateFormater;
-import com.projekt.Ridebuddy.service.RideDataService;
+import com.projekt.Ridebuddy.rides.model.Ride;
+import com.projekt.Ridebuddy.rides.service.RideDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

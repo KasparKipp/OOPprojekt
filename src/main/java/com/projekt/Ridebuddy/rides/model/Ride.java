@@ -1,4 +1,4 @@
-package com.projekt.Ridebuddy.model;
+package com.projekt.Ridebuddy.rides.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

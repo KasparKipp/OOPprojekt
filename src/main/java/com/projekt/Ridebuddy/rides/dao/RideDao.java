@@ -1,7 +1,6 @@
-package com.projekt.Ridebuddy.dao;
+package com.projekt.Ridebuddy.rides.dao;
 
-import com.projekt.Ridebuddy.model.Ride;
-import com.projekt.Ridebuddy.model.RideDateFormater;
+import com.projekt.Ridebuddy.rides.model.Ride;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,8 +1,7 @@
-package com.projekt.Ridebuddy.service;
+package com.projekt.Ridebuddy.rides.service;
 
-import com.projekt.Ridebuddy.dao.RideDao;
-import com.projekt.Ridebuddy.model.Ride;
-import com.projekt.Ridebuddy.model.RideDateFormater;
+import com.projekt.Ridebuddy.rides.dao.RideDao;
+import com.projekt.Ridebuddy.rides.model.Ride;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

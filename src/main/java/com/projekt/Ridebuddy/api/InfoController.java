@@ -16,18 +16,24 @@ public class InfoController {
     private final RideDataService rideDataService;
 
     @Autowired
-    public InfoController(RideDataService rideDataService) { this.rideDataService = rideDataService; }
+    public InfoController(RideDataService rideDataService) {
+        this.rideDataService = rideDataService;
+    }
 
-    @PostMapping(path="{platvorm}")
-    public void addRide(@PathVariable("platvorm") String platvorm, @RequestBody Ride ride) { rideDataService.addRide(platvorm, ride); }
+    @PostMapping(path = "{platvorm}")
+    public void addRide(@PathVariable("platvorm") String platvorm, @RequestBody Ride ride) {
+        rideDataService.addRide(platvorm, ride);
+    }
 
     @GetMapping
-    public List<Ride> getAllRides() { return rideDataService.getAllRides(); }
+    public List<Ride> getAllRides() {
+        return rideDataService.getAllRides();
+    }
 
-    @GetMapping(path="{since}")
+    @GetMapping(path = "{since}")
     public List<Ride> getRides(@PathVariable("since") String since) {
         return rideDataService.getRides(LocalDateTime.parse(since, DateTimeFormatter.ISO_LOCAL_DATE_TIME));
     }
 
-    //toDO add postMapping to date .csv file
+    //TODO add postMapping to date .csv file
 }

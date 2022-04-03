@@ -28,4 +28,6 @@ public class InfoController {
     public List<Ride> getRides(@PathVariable("since") String since) {
         return rideDataService.getRides(LocalDateTime.parse(since, DateTimeFormatter.ISO_LOCAL_DATE_TIME));
     }
+
+    //toDO add postMapping to date .csv file
 }

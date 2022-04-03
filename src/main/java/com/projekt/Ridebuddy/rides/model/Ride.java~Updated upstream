@@ -13,7 +13,7 @@ public class Ride implements Comparable<Ride> {
     private final char currency; //What currency is used
     private final int paymentMethod; //Values specified in model.Constants
     private final int rideDistance;//in km
-    private LocalDateTime timeOfPayment;
+    private final LocalDateTime timeOfPayment;
 
     public Ride(@JsonProperty("rideDate") LocalDateTime rideDate,
                 @JsonProperty("rideAddress") String rideAddress,
@@ -23,7 +23,7 @@ public class Ride implements Comparable<Ride> {
                 @JsonProperty("currency") char currency,
                 @JsonProperty("paymentMethod") int paymentMethod,
                 @JsonProperty("rideDistance") int rideDistance,
-                @JsonProperty("timeOfPayment") LocalDateTime TimeOfPayment) {
+                @JsonProperty("timeOfPayment") LocalDateTime timeOfPayment) {
         this.rideDate = rideDate;
         this.rideAddress = rideAddress;
         this.price = price;
@@ -34,6 +34,7 @@ public class Ride implements Comparable<Ride> {
         this.rideDistance = rideDistance;
         this.timeOfPayment = timeOfPayment;
     }
+
 
 
     public LocalDateTime getRideDate() {

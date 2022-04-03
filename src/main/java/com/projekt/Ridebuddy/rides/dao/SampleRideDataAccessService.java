@@ -15,6 +15,9 @@ public class SampleRideDataAccessService implements RideDao{
     private static List<Ride> DB_UBER = new ArrayList<>();
 
 
+    public SampleRideDataAccessService() {
+    }
+
     @Override
     public int insertRide(String platvorm, Ride ride) {
         if (Objects.equals(platvorm.toUpperCase(), "UBER")) {
@@ -26,7 +29,8 @@ public class SampleRideDataAccessService implements RideDao{
                     ride.getTip(),
                     ride.getCurrency(),
                     ride.getCurrency(),
-                    ride.getPaymentMethod()));
+                    ride.getPaymentMethod(),
+                    ride.getTimeOfPayment()));
         } else if (Objects.equals(platvorm.toUpperCase(), "BOLT")) {
             DB_BOLT.add(ride);
         } else return -1;

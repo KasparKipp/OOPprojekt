@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 @Transactional(readOnly = true)
-public interface DriverRepo extends JpaRepository<Driver, Long> {
+public interface  DriverRepo extends JpaRepository<Driver, Long> {
 
     Optional<Driver> findByEmail(String email);
 }

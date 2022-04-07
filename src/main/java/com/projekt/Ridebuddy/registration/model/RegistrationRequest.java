@@ -1,12 +1,17 @@
 package com.projekt.Ridebuddy.registration.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RegistrationRequest {
     private final String firstName;
     private final String lastName;
     private final String email;
     private final String password;
 
-    public RegistrationRequest(String firstName, String lastName, String email, String password) {
+    public RegistrationRequest(@JsonProperty("firstname") String firstName,
+                               @JsonProperty("lastname") String lastName,
+                               @JsonProperty("email") String email,
+                               @JsonProperty("password") String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

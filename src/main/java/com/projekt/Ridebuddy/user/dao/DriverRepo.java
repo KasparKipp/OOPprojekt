@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-@Repository
+@Repository("drivers")
 @Transactional(readOnly = true)
 public interface DriverRepo extends JpaRepository<Driver, Long> {
 

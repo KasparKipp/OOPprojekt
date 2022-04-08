@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -23,5 +23,5 @@ public class RideDataService {
 
     public List<Ride> getAllRides() { return rideDao.getRideData(); }
 
-    public List<Ride> getRides(LocalDateTime sinceThisTime) { return rideDao.getRideData(sinceThisTime); }
+    public List<Ride> getRides(Date sinceThisTime) { return rideDao.getRideData(sinceThisTime); }
 }

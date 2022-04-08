@@ -1,5 +1,6 @@
 package com.projekt.Ridebuddy.user.model;
 
+import com.projekt.Ridebuddy.rides.model.Ride;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,10 +11,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Entity
+@Table(name = "drivers")
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -33,15 +37,22 @@ public class Driver implements UserDetails {
             generator = "driver_sequence"
     )
     private Long id;
+    @Column(nullable = false, length = 100)
     private String firstname;
+    @Column(nullable = false, length = 100)
     private String lastname;
+    @Column(nullable = false, length = 100)
     private String email;
+    @Column(nullable = false, length = 150)
     private String company;
     private String password;
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
     private Boolean locked = false;
     private Boolean enabled = true;
+
+    @OneToMany(mappedBy = "driver", cascade = CascadeType.ALL)
+    private List<Ride> rides = new ArrayList<>();
 
     public Driver(String firstname,
                   String lastname,

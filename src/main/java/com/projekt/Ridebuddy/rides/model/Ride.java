@@ -1,11 +1,21 @@
-package com.projekt.Ridebuddy.rides.model;
+package com.nullekt.Ridebuddy.rides.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class Ride implements Comparable<Ride> {
-    private final LocalDateTime rideDate;
+
+    @Id
+    private final Long rideDate;
     private final String rideAddress;
     private final double price;
     private final double cancellationFee;
@@ -15,15 +25,16 @@ public class Ride implements Comparable<Ride> {
     private final int rideDistance;//in km
     private LocalDateTime timeOfPayment;
 
-    public Ride(@JsonProperty("rideDate") LocalDateTime rideDate,
-                @JsonProperty("rideAddress") String rideAddress,
-                @JsonProperty("price") double price,
-                @JsonProperty("cancellationFee") double cancellationFee,
-                @JsonProperty("tip") double tip,
-                @JsonProperty("currency") char currency,
-                @JsonProperty("paymentMethod") int paymentMethod,
-                @JsonProperty("rideDistance") int rideDistance,
-                @JsonProperty("timeOfPayment") LocalDateTime TimeOfPayment) {
+    //Konstruktor kus rideDate on long
+    public Ride(Long rideDate,
+                String rideAddress,
+                double price,
+                double cancellationFee,
+                double tip,
+                char currency,
+                int paymentMethod,
+                int rideDistance,
+                LocalDateTime timeOfPayment) {
         this.rideDate = rideDate;
         this.rideAddress = rideAddress;
         this.price = price;
@@ -36,49 +47,19 @@ public class Ride implements Comparable<Ride> {
     }
 
 
-    public LocalDateTime getRideDate() {
-        return rideDate;
-    }
-
-    public String getRideAddress() {
-        return rideAddress;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public double getCancellationFee() {
-        return cancellationFee;
-    }
-
-    public double getTip() {
-        return tip;
-    }
-
-    public char getCurrency() {
-        return currency;
-    }
-
-    public int getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public int getRideDistance() {
-        return rideDistance;
-    }
-
-    public LocalDateTime getTimeOfPayment() {
-        return timeOfPayment;
-    }
 
     @Override
     public int compareTo(Ride o) {
-        return this.getRideDate().compareTo(o.getRideDate());
+        return rideDate.compareTo(o.getRideDate());
     }
 
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
+    }
+
+
+    public Long getId() {
+        return rideDate;
     }
 }

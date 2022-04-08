@@ -5,8 +5,8 @@ import com.projekt.Ridebuddy.rides.service.RideDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @RequestMapping("Rides")
@@ -31,8 +31,8 @@ public class InfoController {
     }
 
     @GetMapping(path = "{since}")
-    public List<Ride> getRides(@PathVariable("since") String since) {
-        return rideDataService.getRides(LocalDateTime.parse(since, DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+    public List<Ride> getRides(@PathVariable("since") String since) throws ParseException {
+        return rideDataService.getRides(new SimpleDateFormat("yyyy-MM-dd").parse(since));
     }
 
     // TODO add postMapping to date .csv file

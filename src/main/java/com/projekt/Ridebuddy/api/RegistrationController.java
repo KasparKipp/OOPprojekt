@@ -10,14 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping(path = "User")
+@RequestMapping(path = "User/register")
 @AllArgsConstructor
-public class UserController {
+public class RegistrationController {
     private RegistrationService registrationService;
 
-    @PostMapping(path = "{register}")
+    @PostMapping
     public String register(@RequestBody RegistrationRequest request) {
 
         return registrationService.register(request);
     }
+
+
 }

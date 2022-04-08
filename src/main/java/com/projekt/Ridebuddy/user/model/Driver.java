@@ -40,25 +40,21 @@ public class Driver implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
-    private Boolean locked;
-    private Boolean enabled;
+    private Boolean locked = false;
+    private Boolean enabled = true;
 
     public Driver(String firstname,
                   String lastname,
                   String email,
                   String company,
                   String password,
-                  UserRole userRole,
-                  Boolean locked,
-                  Boolean enabled) {
+                  UserRole userRole) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.company = company;
         this.password = password;
         this.userRole = userRole;
-        this.locked = locked;
-        this.enabled = enabled;
     }
 
     @Override

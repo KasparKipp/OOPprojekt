@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-@RequestMapping("api/v1/Rides")
+@RequestMapping("Rides")
 @RestController
 public class InfoController {
 

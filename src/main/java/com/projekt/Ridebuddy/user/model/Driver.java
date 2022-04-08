@@ -1,21 +1,32 @@
 package com.projekt.Ridebuddy.user.model;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 
 @Entity
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
 public class Driver implements UserDetails {
+
 
     @SequenceGenerator(
             name = "driver_sequence",
             sequenceName = "driver_sequence",
             allocationSize = 1
     )
+
     @Id
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
@@ -48,10 +59,6 @@ public class Driver implements UserDetails {
         this.userRole = userRole;
         this.locked = locked;
         this.enabled = enabled;
-    }
-
-    public Driver() {
-
     }
 
     @Override
@@ -89,88 +96,5 @@ public class Driver implements UserDetails {
     public boolean isEnabled() {
         return enabled;
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public UserRole getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(UserRole userRole) {
-        this.userRole = userRole;
-    }
-
-    public Boolean getLocked() {
-        return locked;
-    }
-
-    public void setLocked(Boolean locked) {
-        this.locked = locked;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Driver driver = (Driver) o;
-
-        if (!email.equals(driver.email)) return false;
-        if (!company.equals(driver.company)) return false;
-        return password.equals(driver.password);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = email.hashCode();
-        result = 31 * result + company.hashCode();
-        result = 31 * result + password.hashCode();
-        return result;
-    }
 }
+

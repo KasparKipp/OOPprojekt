@@ -26,7 +26,7 @@ Täpsemate juhiste jaoks dokumentatsiooni leiab siit, kuigi ablikatsiooni saab j
     
   Emailid on saadaval:
   
-    0.0.0.0:1080
+    http://0.0.0.0:1080
 
 
 5. Pane programm tööle.

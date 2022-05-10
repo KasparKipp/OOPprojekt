@@ -22,9 +22,14 @@ Selleks, et jooksutada MailDev-i dockeris [Docker](https://www.docker.com/), saa
 Täpsemate juhiste jaoks dokumentatsiooni leiab siit, kuigi ablikatsiooni saab jooksutada jooksutades järgnevat commandi,
 [Loe dokumentatsiooni](https://github.com/maildev/maildev/blob/master/docs/docker.md).
 
-    $ docker run -p 1080:1080 -p 1025:1025 maildev/maildev
+    $ docker run -p 1080:1080 -p 1025:1025 --name Maildev maildev/maildev
+    
+  Emailid on saadaval:
+  
+    0.0.0.0:1080
 
 
 5. Pane programm tööle.
 6. Tutvu praegu toimivate requestidega näiteks meie Postmani töölaual, millele pääsed ligi siit: https://lingid.ee/unsmm
-7. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)
+7. Kasutaja kinnitamiseks 
+8. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)

@@ -16,6 +16,7 @@ Kuidas praegu programmi käivitada:
    a) Ava rakenduse seadistus src/main/resources kaustas "application.properties"
    b) Real "spring.datasource.url=jdbc:postgresql://localhost:<port_nr>/<Andmebaasi_nimi>" sisesta pordi number ja andmebaas mida programm saab kasutada.
 3. Kasutaja loomiseks ja kinnitamiseks kasutame emailiserverit. Selle käivitamiseks käivitada dockeri konteineris jooksva veebiserveri järgneva commandiga:
+.
 
     $ docker run -p 1080:1080 -p 1025:1025 maildev/maildev
 

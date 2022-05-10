@@ -17,12 +17,8 @@ Kuidas praegu programmi käivitada:
    b) Real "spring.datasource.url=jdbc:postgresql://localhost:<port_nr>/<Andmebaasi_nimi>" sisesta pordi number ja andmebaas mida programm saab kasutada.
 3. Kasutaja loomiseks ja kinnitamiseks kasutame emailiserverit. Selle käivitamiseks käivitada dockeri konteineris jooksva veebiserveri järgneva commandiga:
 
-For a guide for usage with Docker,
-[checkout the docs](https://github.com/maildev/maildev/blob/master/docs/docker.md).
-
     $ docker run -p 1080:1080 -p 1025:1025 maildev/maildev
 
-## Usage
 5. Pane programm tööle.
 6. Tutvu praegu toimivate requestidega näiteks meie Postmani töölaual, millele pääsed ligi siit: https://lingid.ee/unsmm
 7. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)

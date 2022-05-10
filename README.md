@@ -15,10 +15,15 @@ Kuidas praegu programmi käivitada:
 2. Käivita arvutis postgres andmebaas ning ütle programmile kus andmebaas jookseb. Selleks:
    a) Ava rakenduse seadistus src/main/resources kaustas "application.properties"
    b) Real "spring.datasource.url=jdbc:postgresql://localhost:<port_nr>/<Andmebaasi_nimi>" sisesta pordi number ja andmebaas mida programm saab kasutada.
-3. Kasutaja loomiseks ja kinnitamiseks kasutame emailiserverit. Selle käivitamiseks käivitada dockeri konteineris jooksva veebiserveri järgneva commandiga:
-.
+3. Kasutaja registreeringu kinnitamiseks kasutame emailiserverit MailDev. 
+
+Selleks, et jooksutada MailDev-i dockeris [Docker](https://www.docker.com/), saab kasutada
+[**maildev/maildev** image-it Docker Hubis](https://hub.docker.com/r/maildev/maildev).
+Täpsemate juhiste jaoks dokumentatsiooni leiab siit, kuigi ablikatsiooni saab jooksutada jooksutades järgnevat commandi,
+[Loe dokumentatsiooni](https://github.com/maildev/maildev/blob/master/docs/docker.md).
 
     $ docker run -p 1080:1080 -p 1025:1025 maildev/maildev
+
 
 5. Pane programm tööle.
 6. Tutvu praegu toimivate requestidega näiteks meie Postmani töölaual, millele pääsed ligi siit: https://lingid.ee/unsmm

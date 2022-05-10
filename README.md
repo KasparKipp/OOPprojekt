@@ -2,7 +2,7 @@
 Õppeaine Objektorienteeritud programmeerimine projektirepo
 
 
-##Projekti II etapp:
+## Projekti II etapp:
 
 Projekti esimeses etappis saime tööle algelise veebiserveri, millel läbi oli võimalik implementeeritud Ride andmetüübi objekte in memory andmebaasi
 lisada, samuti saime tööle Ride objektide loomise näidisfailist lugedes. Edasi hakkasime tööle eesmärgiga kasutada andmebaasi ja luua võimalus kasutaja
@@ -34,7 +34,7 @@ Täpsemate juhiste jaoks dokumentatsiooni leiab siit, kuigi ablikatsiooni saab j
 7. Kasutaja kinnitamiseks 
 8. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)
 
-##Projekti I etapp:
+## Projekti I etapp:
 
 Projekti esimeses etappis saime tööle algelise veebiserveri, millel läbi oli võimalik implementeeritud Ride andmetüübi objekte in memory andmebaasi
 lisada, samuti saime tööle Ride objektide loomise näidisfailist lugedes. Edasi hakkasime tööle eesmärgiga kasutada andmebaasi ja luua võimalus kasutaja

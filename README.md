@@ -15,6 +15,10 @@ Kuidas praegu programmi käivitada:
 2. Käivita arvutis postgres andmebaas ning ütle programmile kus andmebaas jookseb. Selleks:
    a) Ava rakenduse seadistus src/main/resources kaustas "application.properties"
    b) Real "spring.datasource.url=jdbc:postgresql://localhost:<port_nr>/<Andmebaasi_nimi>" sisesta pordi number ja andmebaas mida programm saab kasutada.
-3. Pane programm tööle.
-4. Tutvu praegu toimivate requestidega näiteks meie Postmani töölaual, millele pääsed ligi siit: https://lingid.ee/unsmm
-5. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)
+3. Kasutaja loomiseks ja kinnitamiseks kasutame emailiserverit. Selle käivitamiseks käivitada dockeri konteineris jooksva veebiserveri järgneva commandiga:
+
+   $ docker run -p 1080:1080 -p 1025:1025 maildev/maildev
+
+5. Pane programm tööle.
+6. Tutvu praegu toimivate requestidega näiteks meie Postmani töölaual, millele pääsed ligi siit: https://lingid.ee/unsmm
+7. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)

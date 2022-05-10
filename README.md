@@ -22,15 +22,17 @@ Täpsemate juhiste jaoks dokumentatsiooni leiab siit, kuigi ablikatsiooni saab j
 
     $ docker run -p 1080:1080 -p 1025:1025 --name Maildev maildev/maildev
     
+
+5. Pane programm tööle.
+6. Tutvu praegu toimivate requestidega näiteks meie Postmani töölaual, millele pääsed ligi siit: https://lingid.ee/unsmm
+7. Kasutaja kinnitamiseks ja muuks: 
+
   Emailid on saadaval:
   
     http://0.0.0.0:1080
 
 
-5. Pane programm tööle.
-6. Tutvu praegu toimivate requestidega näiteks meie Postmani töölaual, millele pääsed ligi siit: https://lingid.ee/unsmm
-7. Kasutaja kinnitamiseks 
-8. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)
+9. Lisame täiendavaid funktsionaalsuseid töö edenedes ;)
 
 ## Projekti I etapp:
 
